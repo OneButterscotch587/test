@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Which Party Fits You?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Which Party Fits You?</h1>
+
+    <!-- Quiz screen -->
+    <div id="quiz-screen">
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="question-card">
+        <p id="question-counter"></p>
+        <p class="question-text" id="question-text"></p>
+        <div class="answers">
+          <button data-value="1">Agree</button>
+          <button data-value="0">Neutral</button>
+          <button data-value="-1">Disagree</button>
+          <button data-value="skip">Skip this question</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results screen (hidden until the quiz is finished) -->
+    <div id="results-screen" class="hidden">
+      <h2>Your results</h2>
+      <div id="results-list"></div>
+      <button id="restart-button">Take the quiz again</button>
+    </div>
+  </div>
+
+  <!-- data.js must load before script.js, because script.js uses its data -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
